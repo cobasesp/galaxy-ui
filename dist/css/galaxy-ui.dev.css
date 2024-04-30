@@ -205,6 +205,23 @@ body {
   }
 }
 /******************************
+** Override the system theme **
+******************************/
+body.light {
+  color: #000;
+  background-color: #F6F6F6;
+}
+body.light * {
+  color: #000;
+}
+body.dark {
+  color: #FFF;
+  background-color: #1D2B53;
+}
+body.dark * {
+  color: #FFF;
+}
+/******************************
 *** Common variables config ***
 ******************************/
 h1,
