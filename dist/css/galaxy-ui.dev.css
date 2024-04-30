@@ -298,9 +298,9 @@ p {
 @media screen and (max-width: 500px) {
   .container {
     display: block;
-    width: 90vw;
+    width: 95vw;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 10px;
   }
 }
 .container.fullwidth {
@@ -465,4 +465,63 @@ p {
 }
 body.light .card {
   background-color: #ffffff;
+}
+.btn {
+  background-color: #8576FF;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  padding: 1em 1em;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.btn.btn-lg {
+  padding: 1.5em 2em;
+}
+.btn.btn-sm {
+  font-size: 14px;
+  padding: 0.5em 1em;
+}
+.btn.btn-neon {
+  box-shadow: 0px 0px 10px #8576FF;
+}
+.btn.btn-neon-animated:hover {
+  box-shadow: 0px 0px 10px #8576FF;
+}
+.btn.btn-success {
+  background-color: #45FFCA;
+}
+.btn.btn-success.btn-neon {
+  box-shadow: 0px 0px 10px #45FFCA;
+}
+.btn.btn-success.btn-neon-animated:hover {
+  box-shadow: 0px 0px 10px #45FFCA;
+}
+.btn.btn-info {
+  background-color: #7BC9FF;
+}
+.btn.btn-info.btn-neon {
+  box-shadow: 0px 0px 10px #7BC9FF;
+}
+.btn.btn-info.btn-neon-animated:hover {
+  box-shadow: 0px 0px 10px #7BC9FF;
+}
+.btn.btn-warning {
+  background-color: #FAEF5D;
+}
+.btn.btn-warning.btn-neon {
+  box-shadow: 0px 0px 10px #FAEF5D;
+}
+.btn.btn-warning.btn-neon-animated:hover {
+  box-shadow: 0px 0px 10px #FAEF5D;
+}
+.btn.btn-danger {
+  background-color: #FF004D;
+}
+.btn.btn-danger.btn-neon {
+  box-shadow: 0px 0px 10px #FF004D;
+}
+.btn.btn-danger.btn-neon-animated:hover {
+  box-shadow: 0px 0px 10px #FF004D;
 }
