@@ -306,11 +306,158 @@ p {
   width: 90vw;
   padding: 0 20px;
 }
+/****************
+**** GRID *******
+****************/
+.grid {
+  display: grid;
+  row-gap: 1em;
+  column-gap: 1em;
+}
+.grid.gap-2 {
+  column-gap: 2em;
+}
+.grid.gap-3 {
+  column-gap: 3em;
+}
+.grid.gap-4 {
+  column-gap: 4em;
+}
+.grid.gap-5 {
+  column-gap: 5em;
+}
+.grid.rgap-2 {
+  row-gap: 2em;
+}
+.grid.rgap-3 {
+  row-gap: 3em;
+}
+.grid.rgap-4 {
+  row-gap: 4em;
+}
+.grid.rgap-5 {
+  row-gap: 5em;
+}
+.col-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.col-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.col-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.col-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+.col-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+.col-9 {
+  grid-template-columns: repeat(9, 1fr);
+}
+.col-10 {
+  grid-template-columns: repeat(10, 1fr);
+}
+.col-11 {
+  grid-template-columns: repeat(11, 1fr);
+}
+.col-12 {
+  grid-template-columns: repeat(12, 1fr);
+}
+@media screen and (max-width: 1200px) {
+  .col-tablet-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .col-tablet-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .col-tablet-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .col-tablet-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .col-tablet-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .col-tablet-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .col-tablet-7 {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .col-tablet-8 {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .col-tablet-9 {
+    grid-template-columns: repeat(9, 1fr);
+  }
+  .col-tablet-10 {
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .col-tablet-11 {
+    grid-template-columns: repeat(11, 1fr);
+  }
+  .col-tablet-12 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  .col-mobile-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .col-mobile-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .col-mobile-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .col-mobile-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .col-mobile-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .col-mobile-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .col-mobile-7 {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .col-mobile-8 {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .col-mobile-9 {
+    grid-template-columns: repeat(9, 1fr);
+  }
+  .col-mobile-10 {
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .col-mobile-11 {
+    grid-template-columns: repeat(11, 1fr);
+  }
+  .col-mobile-12 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
 .card {
   background-color: #313b65;
   padding: 20px;
   border-radius: 5px;
   margin: 10px 0;
+}
+.grid .card {
+  margin: 0;
 }
 @media (prefers-color-scheme: light) {
   background-color: #ffffff;

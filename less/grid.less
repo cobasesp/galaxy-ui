@@ -34,3 +34,68 @@
     width: 90vw;
     padding: 0 20px;
 }
+
+/****************
+**** GRID *******
+****************/
+.grid {
+    display: grid;
+    row-gap: 1em;
+    column-gap: 1em;
+
+    &.gap-2 { column-gap: 2em;}
+    &.gap-3 { column-gap: 3em;}
+    &.gap-4 { column-gap: 4em;}
+    &.gap-5 { column-gap: 5em;}
+
+    &.rgap-2 { row-gap: 2em;}
+    &.rgap-3 { row-gap: 3em;}
+    &.rgap-4 { row-gap: 4em;}
+    &.rgap-5 { row-gap: 5em;}
+}
+
+// Columns desktop
+.col-1 {grid-template-columns: repeat(1, 1fr);}
+.col-2 {grid-template-columns: repeat(2, 1fr);}
+.col-3 {grid-template-columns: repeat(3, 1fr);}
+.col-4 {grid-template-columns: repeat(4, 1fr);}
+.col-5 {grid-template-columns: repeat(5, 1fr);}
+.col-6 {grid-template-columns: repeat(6, 1fr);}
+.col-7 {grid-template-columns: repeat(7, 1fr);}
+.col-8 {grid-template-columns: repeat(8, 1fr);}
+.col-9 {grid-template-columns: repeat(9, 1fr);}
+.col-10 {grid-template-columns: repeat(10, 1fr);}
+.col-11 {grid-template-columns: repeat(11, 1fr);}
+.col-12 {grid-template-columns: repeat(12, 1fr);}
+
+// Columns tablet
+@media screen and (max-width: @breakpoint-desktop) {
+    .col-tablet-1 {grid-template-columns: repeat(1, 1fr);}
+    .col-tablet-2 {grid-template-columns: repeat(2, 1fr);}
+    .col-tablet-3 {grid-template-columns: repeat(3, 1fr);}
+    .col-tablet-4 {grid-template-columns: repeat(4, 1fr);}
+    .col-tablet-5 {grid-template-columns: repeat(5, 1fr);}
+    .col-tablet-6 {grid-template-columns: repeat(6, 1fr);}
+    .col-tablet-7 {grid-template-columns: repeat(7, 1fr);}
+    .col-tablet-8 {grid-template-columns: repeat(8, 1fr);}
+    .col-tablet-9 {grid-template-columns: repeat(9, 1fr);}
+    .col-tablet-10 {grid-template-columns: repeat(10, 1fr);}
+    .col-tablet-11 {grid-template-columns: repeat(11, 1fr);}
+    .col-tablet-12 {grid-template-columns: repeat(12, 1fr);}
+}
+
+// Columns mobile
+@media screen and (max-width: @breakpoint-mobile) {
+    .col-mobile-1 {grid-template-columns: repeat(1, 1fr);}
+    .col-mobile-2 {grid-template-columns: repeat(2, 1fr);}
+    .col-mobile-3 {grid-template-columns: repeat(3, 1fr);}
+    .col-mobile-4 {grid-template-columns: repeat(4, 1fr);}
+    .col-mobile-5 {grid-template-columns: repeat(5, 1fr);}
+    .col-mobile-6 {grid-template-columns: repeat(6, 1fr);}
+    .col-mobile-7 {grid-template-columns: repeat(7, 1fr);}
+    .col-mobile-8 {grid-template-columns: repeat(8, 1fr);}
+    .col-mobile-9 {grid-template-columns: repeat(9, 1fr);}
+    .col-mobile-10 {grid-template-columns: repeat(10, 1fr);}
+    .col-mobile-11 {grid-template-columns: repeat(11, 1fr);}
+    .col-mobile-12 {grid-template-columns: repeat(12, 1fr);}
+}
