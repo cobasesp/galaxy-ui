@@ -298,8 +298,9 @@ p {
 @media screen and (max-width: 500px) {
   .container {
     display: block;
-    width: 95%;
+    width: 90vw;
     margin: 0 auto;
+    padding: 0;
   }
 }
 .container.fullwidth {
