@@ -1,0 +1,14 @@
+.card {
+    background-color: @secondary-dark-bg-color;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+@media (prefers-color-scheme: light) {
+    background-color: @secondary-light-bg-color;
+}
+
+body.light .card{
+    background-color: @secondary-light-bg-color;
+}

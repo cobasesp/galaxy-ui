@@ -198,7 +198,7 @@ body {
   }
   body {
     color: #000;
-    background-color: #F6F6F6;
+    background-color: #edede8;
   }
   * {
     color: #000;
@@ -209,7 +209,7 @@ body {
 ******************************/
 body.light {
   color: #000;
-  background-color: #F6F6F6;
+  background-color: #edede8;
 }
 body.light * {
   color: #000;
@@ -256,6 +256,21 @@ p {
 .font-xsmall {
   font-size: 10px;
 }
+.elevation-1 {
+  box-shadow: 0px 0px 10px #10121c;
+}
+.elevation-2 {
+  box-shadow: 0px 2px 15px #10121c;
+}
+.elevation-3 {
+  box-shadow: 0px 5px 15px #10121c;
+}
+.elevation-4 {
+  box-shadow: 0px 10px 20px #10121c;
+}
+.elevation-5 {
+  box-shadow: 0px 20px 25px #10121c;
+}
 .container {
   display: block;
   width: 1200px;
@@ -285,4 +300,16 @@ p {
 .container.fullwidth {
   width: 90vw;
   padding: 0 20px;
+}
+.card {
+  background-color: #313b65;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+@media (prefers-color-scheme: light) {
+  background-color: #ffffff;
+}
+body.light .card {
+  background-color: #ffffff;
 }
