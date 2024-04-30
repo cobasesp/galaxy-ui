@@ -1,0 +1,36 @@
+.container {
+    display: block;
+    width: @breakpoint-desktop;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: @breakpoint-desktop) {
+    .container {
+        display: block;
+        width: @breakpoint-tablet;
+        margin: 0 auto;
+    
+        
+    }
+}
+
+@media screen and (max-width: @breakpoint-tablet) {
+    .container {
+        display: block;
+        width: @breakpoint-mobile;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: @breakpoint-mobile) {
+    .container {
+        display: block;
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+.container.fullwidth {
+    width: 90vw;
+    padding: 0 20px;
+}

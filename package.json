@@ -1,0 +1,22 @@
+{
+  "name": "galaxy-ui",
+  "version": "0.0.1",
+  "description": "A css framework to style your projects",
+  "main": "index.html",
+  "scripts": {
+    "build:dev": "lessc ./less/main.less ./dist/css/galaxy-ui.dev.css",
+    "build:prod": "lessc -x ./less/main.less ./dist/css/galaxy-ui.css",
+    "build": "npm run build:dev && npm run build:prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cobasesp/galaxy-ui.git"
+  },
+  "author": "David Cobas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cobasesp/galaxy-ui/issues"
+  },
+  "homepage": "https://github.com/cobasesp/galaxy-ui#readme"
+}

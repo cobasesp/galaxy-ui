@@ -1,0 +1,62 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    color-scheme: light dark;
+    color: #FFF
+}
+
+/**************************
+*** Default dark colors ***
+***************************/
+body {
+    color: #FFF;
+    background-color: @primary-dark-bg-color;
+}
+
+* {
+    font-family: "Quicksand", sans-serif;
+    color: #FFF;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+/***************************
+****** Light colors ********
+***************************/
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #000;
+    }
+    body {
+        color: #000;
+        background-color: @primary-light-bg-color;
+    }
+
+    *{
+        color: #000;
+    }
+}
+
+
+/******************************
+*** Common variables config ***
+******************************/
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+img {
+    vertical-align: top;
+}
+
+p {
+    font-size: @font-normal;
+}
+
+.font-xbig {font-size: @font-extrabig;}
+.font-big {font-size: @font-big;}
+.font-medium {font-size: @font-medium;}
+.font-normal {font-size: @font-normal;}
+.font-small {font-size: @font-small;}
+.font-xsmall {font-size: @font-extrasmall;}
