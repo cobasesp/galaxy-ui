@@ -748,6 +748,24 @@ input.input.input-lg {
   padding: 1em 1em;
   font-size: 22px;
 }
+input.input.input-error {
+  outline-color: #FF004D;
+  border: 2px solid #FF004D;
+}
+input.input.input-error-neon {
+  outline-color: #FF004D;
+  border: 2px solid #FF004D;
+  box-shadow: 0px 0px 10px #FF004D;
+}
+input.input.input-success {
+  outline-color: #45FFCA;
+  border: 2px solid #45FFCA;
+}
+input.input.input-success-neon {
+  outline-color: #45FFCA;
+  border: 2px solid #45FFCA;
+  box-shadow: 0px 0px 10px #45FFCA;
+}
 .input-group {
   display: grid;
   column-gap: 2em;
