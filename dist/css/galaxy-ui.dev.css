@@ -525,3 +525,25 @@ body.light .card {
 .btn.btn-danger.btn-neon-animated:hover {
   box-shadow: 0px 0px 10px #FF004D;
 }
+input.input {
+  background-color: #FFF;
+  color: #585858;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+}
+input.input.input-lg {
+  padding: 1em 1em;
+  font-size: 22px;
+}
+.input-group {
+  display: grid;
+  column-gap: 2em;
+  row-gap: 1em;
+  width: 100%;
+}
+.input-group input.input  {
+  margin: 0;
+}

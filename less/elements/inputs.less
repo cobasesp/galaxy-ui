@@ -1,0 +1,25 @@
+input.input{
+    background-color: #FFF;
+    color: #585858;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+
+    &.input-lg {
+        padding: 1em 1em;
+        font-size: @font-medium;
+    }
+}
+
+.input-group {
+    display: grid;
+    column-gap: 2em;
+    row-gap: 1em;
+    width: 100%;
+
+    input.input  {
+        margin: 0;
+    }
+}
