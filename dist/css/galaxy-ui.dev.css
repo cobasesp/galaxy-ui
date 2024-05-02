@@ -537,21 +537,24 @@ p {
   margin: 0 auto;
 }
 @media screen and (max-width: 1200px) {
-  .container {
+  .container,
+  nav.navbar .navbar-content {
     display: block;
     width: 900px;
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 900px) {
-  .container {
+  .container,
+  nav.navbar .navbar-content {
     display: block;
     width: 500px;
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 500px) {
-  .container {
+  .container,
+  nav.navbar .navbar-content {
     display: block;
     width: 95vw;
     margin: 0 auto;
@@ -705,6 +708,158 @@ p {
   .col-mobile-12 {
     grid-template-columns: repeat(12, 1fr);
   }
+}
+nav.navbar {
+  background-color: transparent;
+  min-height: 30px;
+  display: block;
+}
+nav.navbar .navbar-content {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+nav.navbar .navbar-content .logo {
+  font-size: 28px;
+}
+nav.navbar .navbar-content * {
+  align-self: center;
+}
+nav.navbar .navbar-content ul.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+nav.navbar .navbar-content ul.menu a {
+  text-decoration: none;
+}
+nav.navbar .navbar-content ul.menu li:not(:first-child) {
+  margin-left: 2em;
+}
+nav.navbar .burger-button {
+  display: none;
+  width: 60px;
+  height: 40px;
+  position: relative;
+  margin: 0 1em 0 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  nav.navbar {
+    padding: 1em 0;
+  }
+  nav.navbar .burger-button {
+    display: block;
+  }
+}
+@media screen and (max-width: 1200px) {
+  nav.navbar .navbar-content {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 900px) {
+  nav.navbar .navbar-content {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav.navbar .navbar-content {
+    width: 95vw;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  nav.navbar .navbar-content ul.menu {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding-left: 1em;
+    top: 65px;
+    left: -300px;
+    width: 300px;
+    height: 95vh;
+    background-color: #1D2B53;
+    transition: 0.5s ease-in-out;
+  }
+  nav.navbar .navbar-content ul.menu.open {
+    left: 0;
+  }
+  nav.navbar .navbar-content ul.menu li {
+    display: block;
+    margin: 0 !important;
+    margin-top: 2em !important;
+  }
+}
+nav.navbar .burger-button span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #8576FF;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+nav.navbar .burger-button span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+nav.navbar .burger-button span:nth-child(2) {
+  top: 18px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+nav.navbar .burger-button span:nth-child(3) {
+  top: 36px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+nav.navbar .burger-button.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+nav.navbar .burger-button.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+nav.navbar .burger-button.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
 }
 .card {
   background-color: #313b65;
