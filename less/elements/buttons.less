@@ -5,6 +5,7 @@
     color: #000;
     font-weight: bold;
     padding: 1em 1em;
+    margin: 0 0.5em;
     cursor: pointer;
     transition: .3s ease-in-out;
 
@@ -36,5 +37,53 @@
         background-color: @danger-color;
         &.btn-neon {box-shadow: 0px 0px 10px @danger-color;}
         &.btn-neon-animated:hover{box-shadow: 0px 0px 10px @danger-color;}
+    }
+
+    &.btn-outlined {
+        background-color: transparent;
+        border: 2px solid @primary-color;
+        color: @primary-color;
+
+        &:hover {
+            background-color: @primary-color;
+            color: #000;
+        }
+
+        &.btn-success {
+            border: 2px solid @success-color;
+            color: @success-color;
+            &:hover {
+                background-color: @success-color;
+                color: #000;
+            }
+            &.btn-neon-animated:hover{box-shadow: 0px 0px 10px @success-color;}
+        }
+        &.btn-info {
+            border: 2px solid @info-color;
+            color: @info-color;
+            &:hover {
+                background-color: @info-color;
+                color: #000;
+            }
+            &.btn-neon-animated:hover{box-shadow: 0px 0px 10px @info-color;}
+        }
+        &.btn-warning {
+            border: 2px solid @warning-color;
+            color: @warning-color;
+            &:hover {
+                background-color: @warning-color;
+                color: #000;
+            }
+            &.btn-neon-animated:hover{box-shadow: 0px 0px 10px @warning-color;}
+        }
+        &.btn-danger {
+            border: 2px solid @danger-color;
+            color: @danger-color;
+            &:hover {
+                background-color: @danger-color;
+                color: #000;
+            }
+            &.btn-neon-animated:hover{box-shadow: 0px 0px 10px @danger-color;}
+        }
     }
 }

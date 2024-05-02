@@ -728,6 +728,7 @@ body.light .card {
   color: #000;
   font-weight: bold;
   padding: 1em 1em;
+  margin: 0 0.5em;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
@@ -780,7 +781,62 @@ body.light .card {
 .btn.btn-danger.btn-neon-animated:hover {
   box-shadow: 0px 0px 10px #FF004D;
 }
-input.input {
+.btn.btn-outlined {
+  background-color: transparent;
+  border: 2px solid #8576FF;
+  color: #8576FF;
+}
+.btn.btn-outlined:hover {
+  background-color: #8576FF;
+  color: #000;
+}
+.btn.btn-outlined.btn-success {
+  border: 2px solid #45FFCA;
+  color: #45FFCA;
+}
+.btn.btn-outlined.btn-success:hover {
+  background-color: #45FFCA;
+  color: #000;
+}
+.btn.btn-outlined.btn-success.btn-neon-animated:hover {
+  box-shadow: 0px 0px 10px #45FFCA;
+}
+.btn.btn-outlined.btn-info {
+  border: 2px solid #7BC9FF;
+  color: #7BC9FF;
+}
+.btn.btn-outlined.btn-info:hover {
+  background-color: #7BC9FF;
+  color: #000;
+}
+.btn.btn-outlined.btn-info.btn-neon-animated:hover {
+  box-shadow: 0px 0px 10px #7BC9FF;
+}
+.btn.btn-outlined.btn-warning {
+  border: 2px solid #FAEF5D;
+  color: #FAEF5D;
+}
+.btn.btn-outlined.btn-warning:hover {
+  background-color: #FAEF5D;
+  color: #000;
+}
+.btn.btn-outlined.btn-warning.btn-neon-animated:hover {
+  box-shadow: 0px 0px 10px #FAEF5D;
+}
+.btn.btn-outlined.btn-danger {
+  border: 2px solid #FF004D;
+  color: #FF004D;
+}
+.btn.btn-outlined.btn-danger:hover {
+  background-color: #FF004D;
+  color: #000;
+}
+.btn.btn-outlined.btn-danger.btn-neon-animated:hover {
+  box-shadow: 0px 0px 10px #FF004D;
+}
+input.input,
+select.input,
+textarea.input {
   background-color: #FFF;
   color: #585858;
   width: 100%;
@@ -788,25 +844,36 @@ input.input {
   border-radius: 5px;
   padding: 0.5em 1em;
   margin-bottom: 1em;
+  resize: vertical;
 }
-input.input.input-lg {
+input.input.input-lg,
+select.input.input-lg,
+textarea.input.input-lg {
   padding: 1em 1em;
   font-size: 22px;
 }
-input.input.input-error {
+input.input.input-error,
+select.input.input-error,
+textarea.input.input-error {
   outline-color: #FF004D;
   border: 2px solid #FF004D;
 }
-input.input.input-error-neon {
+input.input.input-error-neon,
+select.input.input-error-neon,
+textarea.input.input-error-neon {
   outline-color: #FF004D;
   border: 2px solid #FF004D;
   box-shadow: 0px 0px 10px #FF004D;
 }
-input.input.input-success {
+input.input.input-success,
+select.input.input-success,
+textarea.input.input-success {
   outline-color: #45FFCA;
   border: 2px solid #45FFCA;
 }
-input.input.input-success-neon {
+input.input.input-success-neon,
+select.input.input-success-neon,
+textarea.input.input-success-neon {
   outline-color: #45FFCA;
   border: 2px solid #45FFCA;
   box-shadow: 0px 0px 10px #45FFCA;
@@ -819,4 +886,43 @@ input.input.input-success-neon {
 }
 .input-group input.input  {
   margin: 0;
+}
+/***** Range Styles *****/
+input.input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
+  padding: 0;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  display: block;
+}
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input.input[type="range"]::-webkit-slider-runnable-track {
+  background: #585858;
+  height: 0.2rem;
+}
+/******** Firefox ********/
+input.input[type="range"]::-moz-range-track {
+  background: #585858;
+  height: 0.2rem;
+}
+input.input[type="range"]::-webkit-slider-thumb {
+  margin-top: -0.4em;
+  /* Centers thumb on the track */
+  background-color: #8576FF;
+  height: 2rem;
+  width: 1rem;
+}
+/***** Firefox *****/
+input[type="range"]::-moz-range-thumb {
+  border: none;
+  /*Removes extra border that FF applies*/
+  border-radius: 100%;
+  /*Removes default border-radius that FF applies*/
+  background-color: #8576FF;
+  height: 2rem;
+  width: 1rem;
 }

@@ -1,4 +1,4 @@
-input.input{
+input.input, select.input, textarea.input{
     background-color: #FFF;
     color: #585858;
     width: 100%;
@@ -6,6 +6,7 @@ input.input{
     border-radius: 5px;
     padding: 0.5em 1em;
     margin-bottom: 1em;
+    resize: vertical;
 
     &.input-lg {
         padding: 1em 1em;
@@ -44,4 +45,46 @@ input.input{
     input.input  {
         margin: 0;
     }
+}
+
+/***** Range Styles *****/
+input.input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 15rem;
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    display: block;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input.input[type="range"]::-webkit-slider-runnable-track {
+    background: #585858;
+    height: 0.2rem;
+  }
+  
+/******** Firefox ********/
+input.input[type="range"]::-moz-range-track {
+    background: #585858;
+    height: 0.2rem;
+}
+
+// thumb style
+input.input[type="range"]::-webkit-slider-thumb {
+    margin-top: -0.4em; /* Centers thumb on the track */
+    background-color: @primary-color;
+    height: 2rem;
+    width: 1rem;    
+}
+
+ /***** Firefox *****/
+input[type="range"]::-moz-range-thumb {
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 100%; /*Removes default border-radius that FF applies*/
+    background-color: @primary-color;
+    height: 2rem;
+    width: 1rem;
 }
