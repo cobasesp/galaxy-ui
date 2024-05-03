@@ -68,8 +68,17 @@ nav.navbar {
     
     @media screen and (max-width: @breakpoint-tablet) {
         .navbar-content {
-            width: @breakpoint-mobile;
+            width: 90vw;
             margin: 0 auto;
+
+            .logo {
+              font-size: @font-medium;
+            }
+
+            ul.menu {
+              font-size: @font-small;
+              padding: 0;
+            }
         }
     }
     

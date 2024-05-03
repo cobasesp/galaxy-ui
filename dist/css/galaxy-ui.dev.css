@@ -548,7 +548,7 @@ p {
   .container,
   nav.navbar .navbar-content {
     display: block;
-    width: 500px;
+    width: 90vw;
     margin: 0 auto;
   }
 }
@@ -771,8 +771,15 @@ nav.navbar .burger-button {
 }
 @media screen and (max-width: 900px) {
   nav.navbar .navbar-content {
-    width: 500px;
+    width: 90vw;
     margin: 0 auto;
+  }
+  nav.navbar .navbar-content .logo {
+    font-size: 22px;
+  }
+  nav.navbar .navbar-content ul.menu {
+    font-size: 14px;
+    padding: 0;
   }
 }
 @media screen and (max-width: 500px) {
