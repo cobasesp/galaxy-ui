@@ -875,7 +875,7 @@ nav.navbar .burger-button.open span:nth-child(3) {
   left: 8px;
 }
 nav.navbar.navbar-sticky + * {
-  margin-top: 60px;
+  margin-top: 70px;
 }
 .card {
   background-color: #313b65;

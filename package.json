@@ -4,8 +4,8 @@
   "description": "A css framework to style your projects",
   "main": "index.html",
   "scripts": {
-    "build:dev": "lessc ./src/less/main.less ./dist/css/galaxy-ui.dev.css && cp ./src/js/* ./dist/js/",
-    "build:prod": "lessc -x ./src/less/main.less ./dist/css/galaxy-ui.css",
+    "build:dev": "lessc ./src/less/main.less ./dist/css/galaxy-ui.dev.css && cp ./src/js/* ./dist/js/ && node src/build/build.js",
+    "build:prod": "lessc -x ./src/less/main.less ./dist/css/galaxy-ui.css && cp ./src/js/* ./dist/js/ && node src/build/build.js",
     "build": "npm run build:dev && npm run build:prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/cobasesp/galaxy-ui/issues"
   },
-  "homepage": "https://github.com/cobasesp/galaxy-ui#readme"
+  "homepage": "https://github.com/cobasesp/galaxy-ui#readme",
+  "dependencies": {
+    "buildify": "^0.4.0"
+  }
 }
