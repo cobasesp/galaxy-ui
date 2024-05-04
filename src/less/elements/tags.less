@@ -1,0 +1,27 @@
+span.tag {
+    padding: 0.3em 0.6em;
+    border-radius: 5px;
+    background-color: @primary-color;
+    margin: 0 0.1em;
+    font-size: @font-small;
+    color: #000;
+
+    &.tag-neon {box-shadow: 0 0 10px @primary-color;}
+
+    &.tag-success {
+        background-color: @success-color;
+        &.tag-neon {box-shadow: 0 0 10px @success-color;}
+    }
+    &.tag-info {
+        background-color: @info-color;
+        &.tag-neon {box-shadow: 0 0 10px @info-color;}
+    }
+    &.tag-warning {
+        background-color: @warning-color;
+        &.tag-neon {box-shadow: 0 0 10px @warning-color;}
+    }
+    &.tag-danger {
+        background-color: @danger-color;
+        &.tag-neon {box-shadow: 0 0 10px @danger-color;}
+    }
+}

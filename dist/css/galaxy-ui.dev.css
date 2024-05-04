@@ -1156,3 +1156,38 @@ input[type="range"]::-moz-range-thumb {
   height: 2rem;
   width: 1rem;
 }
+span.tag {
+  padding: 0.3em 0.6em;
+  border-radius: 5px;
+  background-color: #8576FF;
+  margin: 0 0.1em;
+  font-size: 14px;
+  color: #000;
+}
+span.tag.tag-neon {
+  box-shadow: 0 0 10px #8576FF;
+}
+span.tag.tag-success {
+  background-color: #45FFCA;
+}
+span.tag.tag-success.tag-neon {
+  box-shadow: 0 0 10px #45FFCA;
+}
+span.tag.tag-info {
+  background-color: #7BC9FF;
+}
+span.tag.tag-info.tag-neon {
+  box-shadow: 0 0 10px #7BC9FF;
+}
+span.tag.tag-warning {
+  background-color: #FAEF5D;
+}
+span.tag.tag-warning.tag-neon {
+  box-shadow: 0 0 10px #FAEF5D;
+}
+span.tag.tag-danger {
+  background-color: #FF004D;
+}
+span.tag.tag-danger.tag-neon {
+  box-shadow: 0 0 10px #FF004D;
+}
