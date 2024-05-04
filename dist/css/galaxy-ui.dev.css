@@ -276,6 +276,12 @@ p {
   clear: both;
   margin: 2em 0;
 }
+.text-center {
+  text-align: center;
+}
+.font-bold {
+  font-weight: bold;
+}
 .m-1 {
   margin: 1em !important;
 }
@@ -876,6 +882,57 @@ nav.navbar .burger-button.open span:nth-child(3) {
 }
 nav.navbar.navbar-sticky + * {
   margin-top: 70px;
+}
+#notifications {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+}
+#notifications.top-left {
+  top: 1em;
+  left: 1em;
+}
+#notifications.top-right {
+  top: 1em;
+  right: 1em;
+}
+#notifications.bottom-left {
+  bottom: 1em;
+  left: 1em;
+}
+#notifications .notification {
+  transition: 0.6 ease-in-out;
+  width: 500px;
+  padding: 2em;
+  padding-top: 1em;
+  margin-top: 0.6em;
+  background-color: #313b65;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px #10121c;
+}
+#notifications .notification button.close {
+  position: relative;
+  top: 0px;
+  left: 90%;
+  cursor: pointer;
+}
+#notifications .notification p {
+  margin: 0 0 1em 0;
+}
+@media screen and (max-width: 500px) {
+  #notifications .notification {
+    max-width: 300px;
+    font-size: 14px;
+    padding: 1em;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .notification {
+    background-color: #ffffff;
+  }
+}
+body.light .notification {
+  background-color: #ffffff;
 }
 .card {
   background-color: #313b65;

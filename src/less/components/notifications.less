@@ -1,0 +1,58 @@
+#notifications {
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+
+    &.top-left {
+        top: 1em;
+        left: 1em;
+    }
+    &.top-right {
+        top: 1em;
+        right: 1em;
+    }
+    &.bottom-left {
+        bottom: 1em;
+        left: 1em;
+    }
+
+    .notification {
+        transition: 0.6 ease-in-out;
+        width: 500px;
+        padding: 2em;
+        padding-top: 1em;
+        margin-top: 0.6em;
+        background-color: @secondary-dark-bg-color;
+        border-radius: 5px;
+        box-shadow: 0px 5px 15px @shadow-dark-color;
+
+        button.close {
+            position: relative;
+            top: 0px;
+            left: 90%;
+            cursor: pointer;
+        }
+
+        p {
+            margin: 0 0 1em 0;
+        }
+
+        @media screen and (max-width: @breakpoint-mobile) {
+                max-width: 300px;
+                font-size: @font-small;
+                padding: 1em;
+        }
+    }
+
+    
+}
+
+@media (prefers-color-scheme: light) {
+    .notification {
+        background-color: @secondary-light-bg-color;
+    }
+}
+
+body.light .notification{
+    background-color: @secondary-light-bg-color;
+}

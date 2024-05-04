@@ -1,11 +1,3 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    const _burguerButton = document.querySelector('div.burger-button');
-const _navMenu = document.querySelector('nav.navbar .menu');
-_burguerButton.addEventListener('click', function(e){
-    _burguerButton.classList.toggle('open');
-    _navMenu.classList.toggle('open');
-});
-
 window.createNotification = function(title, content, type = '') {
     // Create notification
     const notification = document.createElement("div");
@@ -39,13 +31,3 @@ window.createNotification = function(title, content, type = '') {
 
     refreshListeners();
 }
-window.refreshListeners = function() {
-    document.querySelectorAll('button.close').forEach(function(el) {
-        el.addEventListener('click', function(e) {
-            e.target.parentNode.remove();
-        })
-    });
-}
-
-    refreshListeners();
-});
