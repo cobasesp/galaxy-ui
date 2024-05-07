@@ -927,12 +927,20 @@ nav.navbar.navbar-sticky + * {
   }
 }
 @media (prefers-color-scheme: light) {
-  .notification {
-    background-color: #ffffff;
+  #notifications .notification {
+    background-color: #edede8;
+  }
+  #notifications .notification button.close {
+    background-color: #b2b2b2;
+    border: none;
   }
 }
-body.light .notification {
-  background-color: #ffffff;
+body.light #notifications .notification {
+  background-color: #edede8;
+}
+body.light #notifications .notification button.close {
+  background-color: #b2b2b2;
+  border: none;
 }
 .card {
   background-color: #313b65;
