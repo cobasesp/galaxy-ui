@@ -1,0 +1,90 @@
+table.table {
+    border: 1px solid;
+    width: 100%;
+    border-collapse: collapse;
+
+    &.table-centered {
+        text-align: center;
+    }
+
+    tr {
+        td  {
+            border: 1px solid;
+            padding: 0.5em;
+
+            &.text-center {text-align: center;}
+            &.text-left {text-align: left;}
+            &.text-right {text-align: right;}
+        }
+    }
+
+    tr.bold {
+        td {
+            font-weight: bold;
+        }
+    }
+
+    tr.bg-success, tr.bg-info, tr.bg-warning, tr.bg-danger {
+        td {color: #000;}
+    }
+
+    &.table-even {
+        tr:nth-child(even) {background-color: @secondary-dark-bg-color;}
+    }
+    &.table-odd {
+        tr:nth-child(odd) {background-color: @secondary-dark-bg-color;}
+    }
+
+    &.table-filled {
+        background-color: @primary-color;
+        color: #000;
+
+        td {
+            border: 3px solid @primary-dark-bg-color;
+            color: #000;
+        }
+
+        &.table-success {
+            background-color: @success-color;
+        }
+        &.table-info {
+            background-color: @info-color;
+        }
+        &.table-warning {
+            background-color: @warning-color;
+        }
+        &.table-danger {
+            background-color: @danger-color;
+        }
+
+        &.table-even {
+            tr:nth-child(even) td {color: #FFF;}
+        }
+        &.table-odd {
+            tr:nth-child(odd) td {color: #FFF;}
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    table.table{
+        &.table-even {
+            tr:nth-child(even) {background-color: #d1d1d1; color: #000;}
+        }
+        &.table-odd {
+            tr:nth-child(odd) {background-color: #d1d1d1; color: #000;}
+        }
+    }
+}
+
+body.light table.table.table-filled td {
+    border: 3px solid @primary-light-bg-color;
+}
+
+body.light table.table.table-odd tr:nth-child(odd) {background-color: #d1d1d1; color: #000;}
+body.light table.table.table-even tr:nth-child(even) {background-color: #d1d1d1; color: #000;}
+
+body.light table.table.table-odd.table-filled tr:nth-child(odd) {background-color: @primary-light-bg-color;}
+body.light table.table.table-even.table-filled tr:nth-child(even) {background-color: @primary-light-bg-color;}
+body.light table.table.table-odd.table-filled tr:nth-child(odd) td {color: #000;}
+body.light table.table.table-even.table-filled tr:nth-child(even) td {color: #000;}
