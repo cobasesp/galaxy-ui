@@ -1191,3 +1191,50 @@ span.tag.tag-danger {
 span.tag.tag-danger.tag-neon {
   box-shadow: 0 0 10px #FF004D;
 }
+progress {
+  border-radius: 5px;
+  display: block;
+  margin: 1em 0;
+}
+progress.fullwidth {
+  width: 100%;
+}
+progress::-webkit-progress-bar {
+  background-color: #343434;
+  border-radius: 5px;
+}
+progress::-webkit-progress-value {
+  background-color: #8576FF;
+  border-radius: 5px;
+}
+progress.neon::-webkit-progress-value {
+  box-shadow: 0 0 10px #8576FF;
+}
+progress.success::-webkit-progress-value {
+  background-color: #45FFCA;
+}
+progress.info::-webkit-progress-value {
+  background-color: #7BC9FF;
+}
+progress.warning::-webkit-progress-value {
+  background-color: #FAEF5D;
+}
+progress.danger::-webkit-progress-value {
+  background-color: #FF004D;
+}
+progress.success.neon::-webkit-progress-value {
+  box-shadow: 0 0 10px #45FFCA;
+}
+progress.info.neon::-webkit-progress-value {
+  box-shadow: 0 0 10px #7BC9FF;
+}
+progress.warning.neon::-webkit-progress-value {
+  box-shadow: 0 0 10px #FAEF5D;
+}
+progress.danger.neon::-webkit-progress-value {
+  box-shadow: 0 0 10px #FF004D;
+}
+progress::-moz-progress-bar {
+  background-color: #272727;
+  border-radius: 5px;
+}
