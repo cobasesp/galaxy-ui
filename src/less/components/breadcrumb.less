@@ -1,0 +1,42 @@
+div.breadcrumb-bar {
+    display: block;
+    margin: 1em 0;
+
+    a {
+        text-decoration: none;
+        margin: 0;
+        font-size: @font-small;
+
+        &::after {
+            content: " / ";
+        }
+
+        &:last-child::after {
+            content: "";
+        }
+    }
+
+    &.breadcrumb-fill {
+        background-color: @primary-color;
+        padding: 1em;
+
+        a {
+            color: #000;
+        }
+
+        &.breadcrumb-thin{
+            padding: 0.4em 1em;
+        }
+
+        &.breadcrumb-pill {
+            display: inline;
+            padding: 0.4em 1em;
+            border-radius: 5px;
+        }
+
+        &.breadcrumb-success {background-color: @success-color;}
+        &.breadcrumb-info {background-color: @info-color;}
+        &.breadcrumb-warning {background-color: @warning-color;}
+        &.breadcrumb-danger {background-color: @danger-color;}
+    }
+}

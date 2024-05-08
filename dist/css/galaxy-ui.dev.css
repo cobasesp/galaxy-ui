@@ -942,6 +942,48 @@ body.light #notifications .notification button.close {
   background-color: #b2b2b2;
   border: none;
 }
+div.breadcrumb-bar {
+  display: block;
+  margin: 1em 0;
+}
+div.breadcrumb-bar a {
+  text-decoration: none;
+  margin: 0;
+  font-size: 14px;
+}
+div.breadcrumb-bar a::after {
+  content: " / ";
+}
+div.breadcrumb-bar a:last-child::after {
+  content: "";
+}
+div.breadcrumb-bar.breadcrumb-fill {
+  background-color: #8576FF;
+  padding: 1em;
+}
+div.breadcrumb-bar.breadcrumb-fill a {
+  color: #000;
+}
+div.breadcrumb-bar.breadcrumb-fill.breadcrumb-thin {
+  padding: 0.4em 1em;
+}
+div.breadcrumb-bar.breadcrumb-fill.breadcrumb-pill {
+  display: inline;
+  padding: 0.4em 1em;
+  border-radius: 5px;
+}
+div.breadcrumb-bar.breadcrumb-fill.breadcrumb-success {
+  background-color: #45FFCA;
+}
+div.breadcrumb-bar.breadcrumb-fill.breadcrumb-info {
+  background-color: #7BC9FF;
+}
+div.breadcrumb-bar.breadcrumb-fill.breadcrumb-warning {
+  background-color: #FAEF5D;
+}
+div.breadcrumb-bar.breadcrumb-fill.breadcrumb-danger {
+  background-color: #FF004D;
+}
 .card {
   background-color: #313b65;
   padding: 20px;
