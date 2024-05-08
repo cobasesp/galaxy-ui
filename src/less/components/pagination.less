@@ -1,0 +1,49 @@
+div.pagination {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0.5em;
+
+    &.align-left {text-align: left;}
+    &.align-right {text-align: right;}
+
+    a {
+        background-color: @primary-color;
+        text-align: center;
+        color: #000;
+        padding: 0.8em;
+        width: 40px;
+        display: inline-block;
+        margin: 0 0.5em;
+        border-radius: 5px;
+        font-size: @font-small;
+        text-decoration: none;
+
+        &.prev::after{
+            content: "<";
+        }
+        &.next::after{
+            content: ">";
+        }
+        &.first::after{
+            content: "<<";
+        }
+        &.last::after{
+            content: ">>";
+        }
+    }
+
+    &.pagination-success {
+        a {background-color: @success-color;}
+    }
+    &.pagination-info {
+        a {background-color: @info-color;}
+    }
+    &.pagination-warning {
+        a {background-color: @warning-color;}
+    }
+    &.pagination-danger {
+        a {background-color: @danger-color;}
+    }
+}

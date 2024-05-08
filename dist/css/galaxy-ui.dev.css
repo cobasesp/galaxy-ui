@@ -984,6 +984,55 @@ div.breadcrumb-bar.breadcrumb-fill.breadcrumb-warning {
 div.breadcrumb-bar.breadcrumb-fill.breadcrumb-danger {
   background-color: #FF004D;
 }
+div.pagination {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0.5em;
+}
+div.pagination.align-left {
+  text-align: left;
+}
+div.pagination.align-right {
+  text-align: right;
+}
+div.pagination a {
+  background-color: #8576FF;
+  text-align: center;
+  color: #000;
+  padding: 0.8em;
+  width: 40px;
+  display: inline-block;
+  margin: 0 0.5em;
+  border-radius: 5px;
+  font-size: 14px;
+  text-decoration: none;
+}
+div.pagination a.prev::after {
+  content: "<";
+}
+div.pagination a.next::after {
+  content: ">";
+}
+div.pagination a.first::after {
+  content: "<<";
+}
+div.pagination a.last::after {
+  content: ">>";
+}
+div.pagination.pagination-success a {
+  background-color: #45FFCA;
+}
+div.pagination.pagination-info a {
+  background-color: #7BC9FF;
+}
+div.pagination.pagination-warning a {
+  background-color: #FAEF5D;
+}
+div.pagination.pagination-danger a {
+  background-color: #FF004D;
+}
 .card {
   background-color: #313b65;
   padding: 20px;
