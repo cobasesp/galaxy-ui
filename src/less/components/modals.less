@@ -1,0 +1,55 @@
+div.modal {
+    display: none;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .modal-content {
+        position: relative;
+        background-color: @primary-dark-bg-color;
+        min-width: 400px;
+        min-height: 300px;
+        border-radius: 5px;
+        padding: 2em;
+
+        button.close {
+            position: relative;
+            top: -1em;
+            left: 98%;
+            cursor: pointer;
+            display: block;
+
+            &::after {
+                content: "\00d7";
+            }
+        }
+    }
+
+    &.open {
+        display: flex;
+
+        .modal-content {
+            animation-name: popup;
+            animation-duration: 0.4s;
+        }
+    }
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0.1);
+    }
+
+    80% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

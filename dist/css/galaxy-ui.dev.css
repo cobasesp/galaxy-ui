@@ -1033,6 +1033,53 @@ div.pagination.pagination-warning a {
 div.pagination.pagination-danger a {
   background-color: #FF004D;
 }
+div.modal {
+  display: none;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+div.modal .modal-content {
+  position: relative;
+  background-color: #1D2B53;
+  min-width: 400px;
+  min-height: 300px;
+  border-radius: 5px;
+  padding: 2em;
+}
+div.modal .modal-content button.close {
+  position: relative;
+  top: -1em;
+  left: 98%;
+  cursor: pointer;
+  display: block;
+}
+div.modal .modal-content button.close::after {
+  content: "\00d7";
+}
+div.modal.open {
+  display: flex;
+}
+div.modal.open .modal-content {
+  animation-name: popup;
+  animation-duration: 0.4s;
+}
+@keyframes popup {
+  0% {
+    transform: scale(0.1);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .card {
   background-color: #313b65;
   padding: 20px;
