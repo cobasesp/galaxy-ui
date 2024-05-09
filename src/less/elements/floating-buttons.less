@@ -1,0 +1,47 @@
+.floating-button-bar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    button.btn-floating {
+        margin-bottom: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1em;
+        background-color: #8576FF;
+        font-size: @font-medium;
+        color: #000;
+        border-radius: 5px;
+        padding: 0.5em 1em;
+        width: 50px;
+        height: 50px;
+        border: none;
+        box-shadow: 0 0 10px #10121c;
+        cursor: pointer;
+
+        &:focus {
+            box-shadow: 0 0 2px @shadow-dark-color;
+        }
+
+        &.rounded {
+            border-radius: 100%;
+        }
+
+        &.btn-success {
+            background-color: @success-color;
+        }
+        &.btn-info {
+            background-color: @info-color;
+        }
+        &.btn-warning {
+            background-color: @warning-color;
+        }
+        &.btn-danger {
+            background-color: @danger-color;
+        }
+    }
+}

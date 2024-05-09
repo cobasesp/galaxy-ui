@@ -887,6 +887,7 @@ nav.navbar.navbar-sticky + * {
   position: fixed;
   right: 1em;
   bottom: 1em;
+  z-index: 9;
 }
 #notifications.top-left {
   top: 1em;
@@ -1478,4 +1479,47 @@ body.light table.table.table-odd.table-filled tr:nth-child(odd) td {
 }
 body.light table.table.table-even.table-filled tr:nth-child(even) td {
   color: #000;
+}
+.floating-button-bar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.floating-button-bar button.btn-floating {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1em;
+  background-color: #8576FF;
+  font-size: 22px;
+  color: #000;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  width: 50px;
+  height: 50px;
+  border: none;
+  box-shadow: 0 0 10px #10121c;
+  cursor: pointer;
+}
+.floating-button-bar button.btn-floating:focus {
+  box-shadow: 0 0 2px #10121c;
+}
+.floating-button-bar button.btn-floating.rounded {
+  border-radius: 100%;
+}
+.floating-button-bar button.btn-floating.btn-success {
+  background-color: #45FFCA;
+}
+.floating-button-bar button.btn-floating.btn-info {
+  background-color: #7BC9FF;
+}
+.floating-button-bar button.btn-floating.btn-warning {
+  background-color: #FAEF5D;
+}
+.floating-button-bar button.btn-floating.btn-danger {
+  background-color: #FF004D;
 }
