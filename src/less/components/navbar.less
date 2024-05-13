@@ -3,6 +3,7 @@ nav.navbar {
     min-height: 30px;
     display: block;
     background-color: @primary-color;
+    z-index: 99;
 
     &.navbar-sticky {
       position: fixed;
@@ -189,5 +190,17 @@ nav.navbar {
 
 // Trick to put margin to the next sibbling element after navbar sticky
 nav.navbar.navbar-sticky + * {
-  margin-top: 70px;
+  margin-top: 57px;
+}
+
+@media screen and (max-width: @breakpoint-tablet) {
+  nav.navbar.navbar-sticky + * {
+    margin-top: 49px;
+  }
+}
+
+@media screen and (max-width: @breakpoint-mobile) {
+  nav.navbar.navbar-sticky + * {
+    margin-top: 73px;
+  }
 }

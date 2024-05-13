@@ -60,6 +60,12 @@ document.querySelectorAll('button[data-trigger]').forEach(function(el) {
         document.querySelector(`.modal[data-modal="${triggerName}"]`).classList.add('open');
     })
 });
+const _sidebarWrapperButton = document.querySelector('div.wrapper');
+const _sidebar = document.querySelector('.sidebar');
+_sidebarWrapperButton.addEventListener('click', function(e){
+    _sidebarWrapperButton.classList.toggle('open');
+    _sidebar.classList.toggle('open');
+});
 
     refreshListeners();
 });

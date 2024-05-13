@@ -34,6 +34,82 @@
     padding: 0 20px;
 }
 
+// sidebar
+.container-with-sidebar {
+    display: flex;
+    justify-content: space-between;
+
+    div.wrapper {
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        background-color: #313b65;
+        padding: 0.5em;
+        border-radius: 5px;
+        display: none;
+
+        &.open {
+            left: 200px;
+        }
+    }
+    
+    @media screen and (max-width: @breakpoint-tablet) {
+        div.wrapper {
+            display: block;
+        }
+    }
+
+    .sidebar {
+        width: 180px;
+        background-color: @secondary-dark-bg-color;
+        padding: 0 1em;
+
+        @media screen and (max-width: @breakpoint-tablet) {
+            display: none;
+    
+            &.open {
+                display: block;
+            }
+    
+            div.wrapper {
+                display: block;
+            }
+        }        
+
+        div.heading {
+            font-weight: bold;
+            margin-top: 1em;
+
+            &.success {color: @success-color;}
+            &.info {color: @info-color;}
+            &.warning {color: @warning-color;}
+            &.danger {color: @danger-color;}
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            padding-left: 1em;
+            list-style: none;
+
+            li {
+                margin-bottom: 0.2em;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .container {
+        display: block;
+        width: auto;
+        margin: 0;
+        padding: 0 1em;
+        flex: 6;
+    }
+}
+
 /****************
 **** GRID *******
 ****************/

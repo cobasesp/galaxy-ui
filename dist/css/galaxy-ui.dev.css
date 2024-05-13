@@ -1008,6 +1008,81 @@ p {
   width: 90vw;
   padding: 0 20px;
 }
+.container-with-sidebar {
+  display: flex;
+  justify-content: space-between;
+}
+.container-with-sidebar div.wrapper {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  background-color: #313b65;
+  padding: 0.5em;
+  border-radius: 5px;
+  display: none;
+}
+.container-with-sidebar div.wrapper.open {
+  left: 200px;
+}
+.container-with-sidebar div.wrapper.open::after {
+  content: "\00d7";
+}
+@media screen and (max-width: 900px) {
+  .container-with-sidebar div.wrapper {
+    display: block;
+  }
+}
+.container-with-sidebar .sidebar {
+  width: 180px;
+  background-color: #313b65;
+  padding: 0 1em;
+}
+@media screen and (max-width: 900px) {
+  .container-with-sidebar .sidebar {
+    display: none;
+  }
+  .container-with-sidebar .sidebar.open {
+    display: block;
+  }
+  .container-with-sidebar .sidebar div.wrapper {
+    display: block;
+  }
+}
+.container-with-sidebar .sidebar div.heading {
+  font-weight: bold;
+  margin-top: 1em;
+}
+.container-with-sidebar .sidebar div.heading.success {
+  color: #45FFCA;
+}
+.container-with-sidebar .sidebar div.heading.info {
+  color: #7BC9FF;
+}
+.container-with-sidebar .sidebar div.heading.warning {
+  color: #FAEF5D;
+}
+.container-with-sidebar .sidebar div.heading.danger {
+  color: #FF004D;
+}
+.container-with-sidebar .sidebar ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+  list-style: none;
+}
+.container-with-sidebar .sidebar ul li {
+  margin-bottom: 0.2em;
+}
+.container-with-sidebar .sidebar ul li a {
+  text-decoration: none;
+}
+.container-with-sidebar .container {
+  display: block;
+  width: auto;
+  margin: 0;
+  padding: 0 1em;
+  flex: 6;
+}
 /****************
 **** GRID *******
 ****************/
@@ -1157,6 +1232,7 @@ nav.navbar {
   min-height: 30px;
   display: block;
   background-color: #8576FF;
+  z-index: 99;
 }
 nav.navbar.navbar-sticky {
   position: fixed;
@@ -1318,7 +1394,17 @@ nav.navbar .burger-button.open span:nth-child(3) {
   left: 8px;
 }
 nav.navbar.navbar-sticky + * {
-  margin-top: 70px;
+  margin-top: 57px;
+}
+@media screen and (max-width: 900px) {
+  nav.navbar.navbar-sticky + * {
+    margin-top: 49px;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav.navbar.navbar-sticky + * {
+    margin-top: 73px;
+  }
 }
 #notifications {
   position: fixed;
