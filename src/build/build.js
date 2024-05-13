@@ -7,7 +7,8 @@ buildify()
       './src/js/notifications.js', 
       './src/js/close-button.js', 
       './src/js/modals.js',
-      './src/js/sidebar.js'
+      './src/js/sidebar.js',
+      './src/js/tabs.js'
     ]
   )
   .wrap('./src/build/template.js', { version: '1.0' })
