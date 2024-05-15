@@ -1260,6 +1260,7 @@ nav.navbar .navbar-content ul.menu {
   display: flex;
   flex-direction: row;
   margin-left: auto;
+  z-index: 9;
 }
 nav.navbar .navbar-content ul.menu a {
   text-decoration: none;
@@ -1301,6 +1302,9 @@ nav.navbar .burger-button {
   nav.navbar .navbar-content {
     width: 90vw;
     margin: 0 auto;
+  }
+  nav.navbar .navbar-content.navbar-fullwidth {
+    width: 94vw;
   }
   nav.navbar .navbar-content .logo {
     font-size: 22px;
