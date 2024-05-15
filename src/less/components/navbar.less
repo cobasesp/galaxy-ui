@@ -8,7 +8,7 @@ nav.navbar {
     &.navbar-sticky {
       position: fixed;
       top: 0;
-      width: 100vw;
+      width: 100%;
     }
 
     .navbar-content {
@@ -17,6 +17,10 @@ nav.navbar {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+
+        &.navbar-fullwidth {
+          width: 98vw;
+        }
 
         .logo {
             font-size: @font-big;
@@ -78,6 +82,10 @@ nav.navbar {
         .navbar-content {
             width: 90vw;
             margin: 0 auto;
+
+            &.navbar-fullwidth {
+              width: 94vw;
+            }
 
             .logo {
               font-size: @font-medium;

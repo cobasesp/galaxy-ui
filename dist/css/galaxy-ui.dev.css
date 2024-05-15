@@ -1237,7 +1237,7 @@ nav.navbar {
 nav.navbar.navbar-sticky {
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
 }
 nav.navbar .navbar-content {
   width: 1200px;
@@ -1245,6 +1245,9 @@ nav.navbar .navbar-content {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+}
+nav.navbar .navbar-content.navbar-fullwidth {
+  width: 98vw;
 }
 nav.navbar .navbar-content .logo {
   font-size: 28px;
