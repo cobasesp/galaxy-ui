@@ -11,19 +11,19 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
-        border-bottom: 2px solid @primary-dark-bg-color;
+        border-bottom: 2px solid var(--bg-primary);
 
         .tab{
             border-radius: 5px 5px 0 0;
             padding: 0.5em 1em;
             background-color: transparent;
             margin-right: 0.1em;
-            border: 1px solid @secondary-dark-bg-color;
+            border: 1px solid var(--bg-secondary);
             border-bottom: none;
             cursor: pointer;
 
             &.active {
-                background-color: @secondary-dark-bg-color;
+                background-color: var(--bg-secondary);
 
             }
         }
@@ -32,7 +32,7 @@
     .tab-content {
         padding: 2em;
         display: none;
-        background-color: @secondary-dark-bg-color;
+        background-color: var(--bg-secondary);
         width: 100%;
 
         &.active {
@@ -43,7 +43,7 @@
     &.transparent {
         background-color: transparent;
         .tab-bar {
-            border-bottom: 2px solid @secondary-dark-bg-color;
+            border-bottom: 2px solid var(--bg-secondary);
         }
     }
 }

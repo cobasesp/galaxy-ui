@@ -29,10 +29,10 @@ table.table {
     }
 
     &.table-even {
-        tr:nth-child(even) {background-color: @secondary-dark-bg-color;}
+        tr:nth-child(even) {background-color: var(--bg-secondary);}
     }
     &.table-odd {
-        tr:nth-child(odd) {background-color: @secondary-dark-bg-color;}
+        tr:nth-child(odd) {background-color: var(--bg-secondary);}
     }
 
     &.table-filled {
@@ -40,7 +40,7 @@ table.table {
         color: #000;
 
         td {
-            border: 3px solid @primary-dark-bg-color;
+            border: 3px solid var(--bg-primary);
             color: #000;
         }
 

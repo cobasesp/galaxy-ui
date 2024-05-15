@@ -11,7 +11,7 @@ div.modal {
 
     .modal-content {
         position: relative;
-        background-color: @primary-dark-bg-color;
+        background-color: var(--bg-primary);
         min-width: 400px;
         min-height: 300px;
         border-radius: 5px;
@@ -23,6 +23,8 @@ div.modal {
             left: 98%;
             cursor: pointer;
             display: block;
+            background-color: #b2b2b2;
+            border: none;
 
             &::after {
                 content: "\00d7";

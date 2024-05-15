@@ -612,13 +612,15 @@ template {
 :root {
   color-scheme: light dark;
   color: #FFF;
+  --bg-primary: #191825;
+  --bg-secondary: #1D2B53;
 }
 /**************************
 *** Default dark colors ***
 ***************************/
 body {
   color: #FFF;
-  background-color: #1D2B53;
+  background-color: var(--bg-primary);
 }
 * {
   font-family: "Quicksand", sans-serif;
@@ -632,10 +634,12 @@ body {
 @media (prefers-color-scheme: light) {
   :root {
     color: #000;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f6f6f6;
   }
   body {
     color: #000;
-    background-color: #edede8;
+    background-color: var(--bg-primary);
   }
   * {
     color: #000;
@@ -645,15 +649,17 @@ body {
 ** Override the system theme **
 ******************************/
 body.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f6f6f6;
   color: #000;
-  background-color: #edede8;
+  background-color: var(--bg-primary);
 }
 body.light * {
   color: #000;
 }
 body.dark {
   color: #FFF;
-  background-color: #1D2B53;
+  background-color: var(--bg-primary);
 }
 body.dark * {
   color: #FFF;
@@ -936,7 +942,7 @@ p {
   padding: 0 5em !important;
 }
 .bg-primary {
-  background-color: #8576FF !important;
+  background-color: #7579E7 !important;
   color: #000;
 }
 .bg-danger {
@@ -956,9 +962,9 @@ p {
   color: #000;
 }
 .bg-primary-neon {
-  background-color: #8576FF !important;
+  background-color: #7579E7 !important;
   color: #000;
-  box-shadow: 0px 0px 10px #8576FF;
+  box-shadow: 0px 0px 10px #7579E7;
 }
 .bg-danger-neon {
   background-color: #FF004D !important;
@@ -1037,7 +1043,7 @@ p {
 }
 .container-with-sidebar .sidebar {
   width: 180px;
-  background-color: #313b65;
+  background-color: var(--bg-secondary);
   padding: 0 1em;
 }
 @media screen and (max-width: 900px) {
@@ -1237,7 +1243,7 @@ nav.navbar {
   background-color: transparent;
   min-height: 30px;
   display: block;
-  background-color: #8576FF;
+  background-color: #7579E7;
   z-index: 99;
 }
 nav.navbar.navbar-sticky {
@@ -1335,7 +1341,7 @@ nav.navbar .burger-button {
     left: -300px;
     width: 300px;
     height: 95vh;
-    background-color: #8576FF;
+    background-color: #7579E7;
     transition: 0.5s ease-in-out;
   }
   nav.navbar .navbar-content ul.menu.open {
@@ -1352,7 +1358,7 @@ nav.navbar .burger-button span {
   position: absolute;
   height: 5px;
   width: 100%;
-  background: #1D2B53;
+  background: var(--bg-primary);
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -1443,7 +1449,7 @@ nav.navbar.navbar-sticky + * {
   padding: 2em;
   padding-top: 1em;
   margin-top: 0.6em;
-  background-color: #313b65;
+  background-color: var(--bg-secondary);
   border-radius: 5px;
   box-shadow: 0px 5px 15px #10121c;
 }
@@ -1465,7 +1471,7 @@ nav.navbar.navbar-sticky + * {
 }
 @media (prefers-color-scheme: light) {
   #notifications .notification {
-    background-color: #edede8;
+    background-color: #ffffff;
   }
   #notifications .notification button.close {
     background-color: #b2b2b2;
@@ -1473,7 +1479,7 @@ nav.navbar.navbar-sticky + * {
   }
 }
 body.light #notifications .notification {
-  background-color: #edede8;
+  background-color: #ffffff;
 }
 body.light #notifications .notification button.close {
   background-color: #b2b2b2;
@@ -1495,7 +1501,7 @@ div.breadcrumb-bar a:last-child::after {
   content: "";
 }
 div.breadcrumb-bar.breadcrumb-fill {
-  background-color: #8576FF;
+  background-color: #7579E7;
   padding: 1em;
 }
 div.breadcrumb-bar.breadcrumb-fill a {
@@ -1535,7 +1541,7 @@ div.pagination.align-right {
   text-align: right;
 }
 div.pagination a {
-  background-color: #8576FF;
+  background-color: #7579E7;
   text-align: center;
   color: #000;
   padding: 0.8em;
@@ -1583,7 +1589,7 @@ div.modal {
 }
 div.modal .modal-content {
   position: relative;
-  background-color: #1D2B53;
+  background-color: var(--bg-primary);
   min-width: 400px;
   min-height: 300px;
   border-radius: 5px;
@@ -1595,6 +1601,8 @@ div.modal .modal-content button.close {
   left: 98%;
   cursor: pointer;
   display: block;
+  background-color: #b2b2b2;
+  border: none;
 }
 div.modal .modal-content button.close::after {
   content: "\00d7";
@@ -1630,24 +1638,24 @@ div.modal.open .modal-content {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  border-bottom: 2px solid #1D2B53;
+  border-bottom: 2px solid var(--bg-primary);
 }
 .tab-component .tab-bar .tab {
   border-radius: 5px 5px 0 0;
   padding: 0.5em 1em;
   background-color: transparent;
   margin-right: 0.1em;
-  border: 1px solid #313b65;
+  border: 1px solid var(--bg-secondary);
   border-bottom: none;
   cursor: pointer;
 }
 .tab-component .tab-bar .tab.active {
-  background-color: #313b65;
+  background-color: var(--bg-secondary);
 }
 .tab-component .tab-content {
   padding: 2em;
   display: none;
-  background-color: #313b65;
+  background-color: var(--bg-secondary);
   width: 100%;
 }
 .tab-component .tab-content.active {
@@ -1657,10 +1665,10 @@ div.modal.open .modal-content {
   background-color: transparent;
 }
 .tab-component.transparent .tab-bar {
-  border-bottom: 2px solid #313b65;
+  border-bottom: 2px solid var(--bg-secondary);
 }
 .card {
-  background-color: #313b65;
+  background-color: var(--bg-secondary);
   padding: 20px;
   border-radius: 5px;
   margin: 10px 0;
@@ -1668,16 +1676,8 @@ div.modal.open .modal-content {
 .grid .card {
   margin: 0;
 }
-@media (prefers-color-scheme: light) {
-  .card {
-    background-color: #ffffff;
-  }
-}
-body.light .card {
-  background-color: #ffffff;
-}
 .btn {
-  background-color: #8576FF;
+  background-color: #7579E7;
   border: none;
   display: inline-flex;
   justify-content: center;
@@ -1701,10 +1701,10 @@ body.light .card {
   padding: 0.5em 1em;
 }
 .btn.btn-neon {
-  box-shadow: 0px 0px 10px #8576FF;
+  box-shadow: 0px 0px 10px #7579E7;
 }
 .btn.btn-neon-animated:hover {
-  box-shadow: 0px 0px 10px #8576FF;
+  box-shadow: 0px 0px 10px #7579E7;
 }
 .btn.btn-success {
   background-color: #45FFCA;
@@ -1744,11 +1744,11 @@ body.light .card {
 }
 .btn.btn-outlined {
   background-color: transparent;
-  border: 2px solid #8576FF;
-  color: #8576FF;
+  border: 2px solid #7579E7;
+  color: #7579E7;
 }
 .btn.btn-outlined:hover {
-  background-color: #8576FF;
+  background-color: #7579E7;
   color: #000;
 }
 .btn.btn-outlined.btn-success {
@@ -1873,7 +1873,7 @@ input.input[type="range"]::-moz-range-track {
 input.input[type="range"]::-webkit-slider-thumb {
   margin-top: -0.4em;
   /* Centers thumb on the track */
-  background-color: #8576FF;
+  background-color: #7579E7;
   height: 2rem;
   width: 1rem;
 }
@@ -1883,20 +1883,35 @@ input[type="range"]::-moz-range-thumb {
   /*Removes extra border that FF applies*/
   border-radius: 100%;
   /*Removes default border-radius that FF applies*/
-  background-color: #8576FF;
+  background-color: #7579E7;
   height: 2rem;
   width: 1rem;
+}
+@media (prefers-color-scheme: light) {
+  input.input,
+  select.input,
+  textarea.input {
+    border: 1px solid #585858;
+  }
+}
+/******************************
+** Override the system theme **
+******************************/
+body.light input.input,
+body.light select.input,
+body.light textarea.input {
+  border: 1px solid #585858;
 }
 span.tag {
   padding: 0.3em 0.6em;
   border-radius: 5px;
-  background-color: #8576FF;
+  background-color: #7579E7;
   margin: 0 0.1em;
   font-size: 14px;
   color: #000;
 }
 span.tag.tag-neon {
-  box-shadow: 0 0 10px #8576FF;
+  box-shadow: 0 0 10px #7579E7;
 }
 span.tag.tag-success {
   background-color: #45FFCA;
@@ -1935,11 +1950,11 @@ progress::-webkit-progress-bar {
   border-radius: 5px;
 }
 progress::-webkit-progress-value {
-  background-color: #8576FF;
+  background-color: #7579E7;
   border-radius: 5px;
 }
 progress.neon::-webkit-progress-value {
-  box-shadow: 0 0 10px #8576FF;
+  box-shadow: 0 0 10px #7579E7;
 }
 progress.success::-webkit-progress-value {
   background-color: #45FFCA;
@@ -2000,17 +2015,17 @@ table.table tr.bg-danger td {
   color: #000;
 }
 table.table.table-even tr:nth-child(even) {
-  background-color: #313b65;
+  background-color: var(--bg-secondary);
 }
 table.table.table-odd tr:nth-child(odd) {
-  background-color: #313b65;
+  background-color: var(--bg-secondary);
 }
 table.table.table-filled {
-  background-color: #8576FF;
+  background-color: #7579E7;
   color: #000;
 }
 table.table.table-filled td {
-  border: 3px solid #1D2B53;
+  border: 3px solid var(--bg-primary);
   color: #000;
 }
 table.table.table-filled.table-success {
@@ -2042,7 +2057,7 @@ table.table.table-filled.table-odd tr:nth-child(odd) td {
   }
 }
 body.light table.table.table-filled td {
-  border: 3px solid #edede8;
+  border: 3px solid #ffffff;
 }
 body.light table.table.table-odd tr:nth-child(odd) {
   background-color: #d1d1d1;
@@ -2053,10 +2068,10 @@ body.light table.table.table-even tr:nth-child(even) {
   color: #000;
 }
 body.light table.table.table-odd.table-filled tr:nth-child(odd) {
-  background-color: #edede8;
+  background-color: #ffffff;
 }
 body.light table.table.table-even.table-filled tr:nth-child(even) {
-  background-color: #edede8;
+  background-color: #ffffff;
 }
 body.light table.table.table-odd.table-filled tr:nth-child(odd) td {
   color: #000;

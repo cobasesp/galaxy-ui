@@ -88,3 +88,18 @@ input[type="range"]::-moz-range-thumb {
     height: 2rem;
     width: 1rem;
 }
+
+@media (prefers-color-scheme: light) {
+    input.input, select.input, textarea.input {
+        border: 1px solid #585858;
+    }
+}
+
+/******************************
+** Override the system theme **
+******************************/
+body.light{
+    input.input, select.input, textarea.input {
+        border: 1px solid #585858;
+    }
+}

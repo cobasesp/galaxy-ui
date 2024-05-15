@@ -14,7 +14,9 @@
 
 :root {
     color-scheme: light dark;
-    color: #FFF
+    color: #FFF;
+    --bg-primary: @primary-dark-bg-color;
+    --bg-secondary: @secondary-dark-bg-color;
 }
 
 /**************************
@@ -22,7 +24,7 @@
 ***************************/
 body {
     color: #FFF;
-    background-color: @primary-dark-bg-color;
+    background-color: var(--bg-primary);
 }
 
 * {
@@ -38,10 +40,12 @@ body {
 @media (prefers-color-scheme: light) {
     :root {
         color: #000;
+        --bg-primary: @primary-light-bg-color;
+        --bg-secondary: @secondary-light-bg-color;
     }
     body {
         color: #000;
-        background-color: @primary-light-bg-color;
+        background-color: var(--bg-primary);
     }
 
     *{
@@ -53,8 +57,10 @@ body {
 ** Override the system theme **
 ******************************/
 body.light{
+    --bg-primary: @primary-light-bg-color;
+    --bg-secondary: @secondary-light-bg-color;
     color: #000;
-    background-color: @primary-light-bg-color;
+    background-color: var(--bg-primary);
 
     *{
         color: #000;
@@ -63,7 +69,7 @@ body.light{
 
 body.dark{
     color: #FFF;
-    background-color: @primary-dark-bg-color;
+    background-color: var(--bg-primary);
     
     *{
         color: #FFF;
