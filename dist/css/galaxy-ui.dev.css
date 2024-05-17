@@ -1733,6 +1733,33 @@ div.modal.open .modal-content {
 .tab-component.transparent .tab-bar {
   border-bottom: 2px solid var(--bg-secondary);
 }
+.accordion {
+  background-color: var(--bg-secondary);
+  padding: 0.2em 1em;
+  border-radius: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.accordion.transparent {
+  background-color: transparent;
+  border: 1px solid var(--bg-secondary);
+}
+.accordion .title {
+  display: inline-block;
+}
+.accordion span {
+  display: inline-block;
+  transition: 0.2s ease-in-out;
+}
+.accordion .content {
+  display: none;
+}
+.accordion.open .content {
+  display: block;
+}
+.accordion.open span {
+  transform: rotate(90deg);
+}
 .card {
   background-color: var(--bg-secondary);
   padding: 20px;

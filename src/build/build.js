@@ -9,7 +9,8 @@ buildify()
       './src/js/modals.js',
       './src/js/sidebar.js',
       './src/js/tabs.js',
-      './src/js/theme-toggle.js'
+      './src/js/theme-toggle.js',
+      './src/js/accordions.js'
     ]
   )
   .wrap('./src/build/template.js', { version: '1.0' })
