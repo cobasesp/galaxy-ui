@@ -53,6 +53,12 @@ window.refreshListeners = function() {
             e.target.parentNode.parentNode.classList.remove('open');
         })
     });
+
+    document.querySelectorAll('.card button.close').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+            e.target.parentNode.remove();
+        })
+    });
 }
 document.querySelectorAll('button[data-trigger]').forEach(function(el) {
     el.addEventListener('click', function(e) {
