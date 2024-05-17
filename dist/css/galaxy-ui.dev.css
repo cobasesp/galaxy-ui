@@ -1239,6 +1239,72 @@ p {
     grid-template-columns: repeat(12, 1fr);
   }
 }
+.flex {
+  display: flex;
+}
+.flex.flex-column {
+  flex-direction: column;
+}
+.flex.flex-row {
+  flex-direction: row;
+}
+.flex.justify-start {
+  justify-content: start;
+}
+.flex.justify-end {
+  justify-content: end;
+}
+.flex.justify-center {
+  justify-content: center;
+}
+.flex.justify-flex-start {
+  justify-content: flex-start;
+}
+.flex.justify-flex-end {
+  justify-content: flex-end;
+}
+.flex.justify-stretch {
+  justify-content: stretch;
+}
+.flex.justify-space-between {
+  justify-content: space-between;
+}
+.flex.justify-space-around {
+  justify-content: space-around;
+}
+.flex.justify-space-evenly {
+  justify-content: space-evenly;
+}
+.flex.align-start {
+  align-items: start;
+}
+.flex.align-end {
+  align-items: end;
+}
+.flex.align-center {
+  align-items: center;
+}
+.flex.align-flex-start {
+  align-items: flex-start;
+}
+.flex.align-flex-end {
+  align-items: flex-end;
+}
+.flex .align-start {
+  align-self: start;
+}
+.flex .align-end {
+  align-self: end;
+}
+.flex .align-center {
+  align-self: center;
+}
+.flex .align-flex-start {
+  align-self: flex-start;
+}
+.flex .align-flex-end {
+  align-self: flex-end;
+}
 nav.navbar {
   background-color: transparent;
   min-height: 30px;
