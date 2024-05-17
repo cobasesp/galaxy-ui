@@ -62,7 +62,6 @@
     .sidebar {
         width: 180px;
         background-color: var(--bg-secondary);
-        padding: 0 1em;
 
         @media screen and (max-width: @breakpoint-tablet) {
             display: none;
@@ -82,6 +81,7 @@
         div.heading {
             font-weight: bold;
             margin-top: 1em;
+            padding-left: 1em;
 
             &.success {color: @success-color;}
             &.info {color: @info-color;}
@@ -92,11 +92,19 @@
         ul {
             margin: 0;
             padding: 0;
-            padding-left: 1em;
             list-style: none;
 
             li {
                 margin-bottom: 0.2em;
+                padding: 0.5em;
+                padding-left: 2em;
+                &.active {
+                    margin-left: -13px;
+                    background-color: var(--bg-primary);
+                    &::before {
+                        content: '> ';
+                    }
+                }
                 a {
                     text-decoration: none;
                 }

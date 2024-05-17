@@ -1044,7 +1044,6 @@ p {
 .container-with-sidebar .sidebar {
   width: 180px;
   background-color: var(--bg-secondary);
-  padding: 0 1em;
 }
 @media screen and (max-width: 900px) {
   .container-with-sidebar .sidebar {
@@ -1063,6 +1062,7 @@ p {
 .container-with-sidebar .sidebar div.heading {
   font-weight: bold;
   margin-top: 1em;
+  padding-left: 1em;
 }
 .container-with-sidebar .sidebar div.heading.success {
   color: #45FFCA;
@@ -1079,11 +1079,19 @@ p {
 .container-with-sidebar .sidebar ul {
   margin: 0;
   padding: 0;
-  padding-left: 1em;
   list-style: none;
 }
 .container-with-sidebar .sidebar ul li {
   margin-bottom: 0.2em;
+  padding: 0.5em;
+  padding-left: 2em;
+}
+.container-with-sidebar .sidebar ul li.active {
+  margin-left: -13px;
+  background-color: var(--bg-primary);
+}
+.container-with-sidebar .sidebar ul li.active::before {
+  content: '> ';
 }
 .container-with-sidebar .sidebar ul li a {
   text-decoration: none;
