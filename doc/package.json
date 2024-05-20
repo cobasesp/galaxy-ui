@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "cp -R ../dist/* ./public && astro dev",
     "start": "cp -R ../dist/* ./public && astro dev",
-    "build": "astro build && cp -R ./dist/* ../documentation/",
+    "build": "astro build && cp -R ./dist/* ../docs/",
     "preview": "astro preview",
     "astro": "astro"
   },
