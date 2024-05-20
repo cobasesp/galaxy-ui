@@ -1337,6 +1337,7 @@ nav.navbar .navbar-content.navbar-fullwidth {
 }
 nav.navbar .navbar-content .logo {
   font-size: 28px;
+  text-decoration: none;
 }
 nav.navbar .navbar-content * {
   align-self: center;
