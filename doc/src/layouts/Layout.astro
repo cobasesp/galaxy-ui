@@ -1,0 +1,49 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Galaxy UI documentation" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="../../public/css/galaxy-ui.dev.css">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-sticky">
+			<div class="navbar-content navbar-fullwidth">
+				<div class="burger-button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<a href="" class="logo">Galaxy UI</a>
+				<ul class="menu">
+					<li><a href="#">Documentation</a></li>
+					<li><a href="#">Changelog</a></li>
+					<li><a href="#">Issues</a></li>
+					<li>
+						<button class="btn btn-sm btn-info btn-neon-animated theme-toggle" data-themetoggle="dark">
+							<span class="material-symbols-rounded darkmode active">
+								dark_mode
+							</span>
+							<span class="material-symbols-rounded lightmode">
+								light_mode
+							</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<slot />
+		<script src="../../public/js/galaxy-bundle.dev.js"></script>
+	</body>
+</html>
