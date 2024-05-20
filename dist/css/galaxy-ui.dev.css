@@ -1768,6 +1768,16 @@ div.modal.open .modal-content {
 .accordion.open span {
   transform: rotate(90deg);
 }
+footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-secondary);
+}
+footer.thin-footer {
+  height: 60px;
+}
 .card {
   background-color: var(--bg-secondary);
   padding: 20px;
