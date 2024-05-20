@@ -4,6 +4,10 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import { ViewTransitions } from 'astro:transitions';
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <!doctype html>
@@ -15,6 +19,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="stylesheet" href="../../public/css/galaxy-ui.dev.css">
 		<meta name="generator" content={Astro.generator} />
+		<ViewTransitions />
 		<title>{title}</title>
 	</head>
 	<body>
@@ -27,7 +32,7 @@ const { title } = Astro.props;
 				</div>
 				<a href="" class="logo">Galaxy UI</a>
 				<ul class="menu">
-					<li><a href="#">Documentation</a></li>
+					<li><a href="/documentation/getting-started">Documentation</a></li>
 					<li><a href="#">Changelog</a></li>
 					<li><a href="#">Issues</a></li>
 					<li>
@@ -43,7 +48,55 @@ const { title } = Astro.props;
 				</ul>
 			</div>
 		</nav>
-		<slot />
+		<div class="container-with-sidebar">
+			<div class="wrapper">&times;</div>
+			<div class="sidebar">
+				<div class="heading success">First steps</div>
+				<ul>
+					<li class={currentPath === "documentation/getting-started" ? "active" : ""}><a href="/documentation/getting-started">Getting started</a></li>
+					<li><a href="">Installation</a></li>
+				</ul>
+	
+				<div class="heading info">Layout</div>
+				<ul>
+					<li><a href="">Containers</a></li>
+					<li><a href="">Sidebar</a></li>
+					<li><a href="">Grid system</a></li>
+					<li><a href="">Flex</a></li>
+				</ul>
+
+				<div class="heading danger">Components</div>
+				<ul>
+					<li><a href="">Navbar</a></li>
+					<li><a href="">Pagination</a></li>
+					<li><a href="">Modals</a></li>
+					<li><a href="">Tabs</a></li>
+					<li><a href="">Breadcrumbs</a></li>
+					<li><a href="">Accordions</a></li>
+				</ul>
+
+				<div class="heading warning">Elements</div>
+				<ul>
+					<li><a href="">Card</a></li>
+					<li><a href="">Inputs</a></li>
+					<li><a href="">Buttons</a></li>
+					<li><a href="">Floating Buttons</a></li>
+					<li><a href="">Progress bar</a></li>
+					<li><a href="">Tags</a></li>
+					<li><a href="">Tables</a></li>
+					<li><a href="">Icons</a></li>
+				</ul>
+
+				<div class="heading danger">Other</div>
+				<ul>
+					<li><a href="">Helpers</a></li>
+					<li><a href="">Margins and paddings</a></li>
+				</ul>
+			</div>
+			<div class="container">
+				<div class="spacer"></div>
+				<slot />
+			</div>
 		<script src="../../public/js/galaxy-bundle.dev.js"></script>
 	</body>
 </html>
