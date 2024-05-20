@@ -6,6 +6,7 @@
   "scripts": {
     "build:dev": "lessc ./src/less/main.less ./dist/css/galaxy-ui.dev.css && cp ./src/js/* ./dist/js/ && node src/build/build.js",
     "build:prod": "lessc -x ./src/less/main.less ./dist/css/galaxy-ui.css && cp ./src/js/* ./dist/js/ && node src/build/build.js",
+    "deploy": "surge ./dist",
     "build": "npm run build:dev && npm run build:prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
